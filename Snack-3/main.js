@@ -3,16 +3,16 @@
 const nomi = ['Marco', 'Ciro', 'Anna', 'Paolo', 'Rita'];
 const cognomi = ['Rossi', 'Ricci', 'Esposito', 'Colombo', 'Bianchi'];
 
-console.log(nomi);
-const generaN1 = Math.floor(Math.random() * nomi.length);
-const generaC1 = Math.floor(Math.random() * cognomi.length);
-console.log((generaN1, nomi[generaN1]) + (' ') + (generaC1, cognomi[generaC1]));
+const nomeCompleto = []
 
-const generaN2 = Math.floor(Math.random() * nomi.length);
-const generaC2 = Math.floor(Math.random() * cognomi.length);
-console.log((generaN2, nomi[generaN2]) + (' ') + (generaC2, cognomi[generaC2]));
+for (let i = 0; i < 3; i++){
+    const generaN = Math.floor(Math.random() * nomi.length);
+    const generaC = Math.floor(Math.random() * cognomi.length);
 
-const generaN3 = Math.floor(Math.random() * nomi.length);
-const generaC3 = Math.floor(Math.random() * cognomi.length);
-console.log((generaN3, nomi[generaN3]) + (' ') + (generaC3, cognomi[generaC3]));
+    const newCompleto = `${nomi[generaN]} ${cognomi[generaC]}`;
+
+    nomeCompleto.push(newCompleto);
+}
+
+console.log(nomeCompleto);
 
